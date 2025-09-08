@@ -43,9 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DriverTwo.cs" />
     <Compile Include="Driver.cs" />
-    <Compile Include="HealthProfile.cs" />
     <Compile Include="HeartRates.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
