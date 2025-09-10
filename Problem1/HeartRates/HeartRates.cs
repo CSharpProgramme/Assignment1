@@ -15,19 +15,32 @@ namespace Problem1
 
         public HeartRates(string firstName, string lastName, int birthYear, int currentYear)
         {
-            FirstName = firstName;
-            LastName = lastName;
-            BirthYear = birthYear;
-            CurrentYear = currentYear;
+            this.firstName = firstName;
+            this.lastName = lastName;
+            this.birthYear = birthYear;
+            this.currentYear = currentYear;
         }
 
-        public string FirstName { get; set; }
+        public string FirstName 
+        {
+            get { return firstName; }
+            set { this.firstName = value; }
+        }
+        public string LastName 
+        { 
+            get { return lastName; } 
+            set { this.lastName = value; }
+        }
+        public int BirthYear 
+        { 
+            get { return birthYear;}
+            set {  this.birthYear = value; }
+        }
+        public int CurrentYear 
+        {   get { return currentYear;}
+            set { this.currentYear = value; }
+        }
 
-        public string LastName {  get; set; }
-
-        public int BirthYear { get; set; }
-
-        public int CurrentYear { get; set; }
 
         public int Age
         {
@@ -51,14 +64,32 @@ namespace Problem1
 
         public void DisplayPatientRecord()
         {
-            Console.WriteLine("PATIENT HEART RATE RECORD");
-            Console.WriteLine("──────────────────────────");
-            Console.WriteLine($"{"Patient Name",-25} {LastName}, {FirstName}");
-            Console.WriteLine($"{"Patient Birth Year",-25} {BirthYear}");
-            Console.WriteLine($"{"Patient Age",-25} {Age}");
-            Console.WriteLine($"{"Maximum Heart Rate",-25} {MaximumHR}");
-            Console.WriteLine($"{"Target Heart Rate Range",-25} {MinimumTargetHeartRate}—{MaximumTargetHeartRate}");
-            Console.WriteLine();
+            string fullname = LastName + ", " + FirstName;
+            string heartRatetarget = MinimumTargetHeartRate + "-" + MaximumTargetHeartRate;
+
+            drawLine();
+            Console.WriteLine($"| {"PATIENT HEART RATE RECORD",50}  {"|",27}");
+            drawLine();
+            Console.WriteLine($"| {"Patient Name",-25} | {fullname,-49} |");
+            drawLine();
+            Console.WriteLine($"| {"Patient Birth Year",-25} | {BirthYear,49} |");
+            drawLine();
+            Console.WriteLine($"| {"Patient Age",-25} | {Age,49} |");
+            drawLine();
+            Console.WriteLine($"| {"Maximum Heart Rate",-25} | {MaximumHR,49} |");
+            drawLine();
+            Console.WriteLine($"| {"Target Heart Rate Range",-25} | {heartRatetarget,49} |");
+            drawLine();
+        }
+
+        public static void drawLine()
+        {
+            Console.Write("|");
+            for (int i = 0; i < 79; i++)
+            {
+                Console.Write("-");
+            }
+            Console.WriteLine("|");
         }
     }
 }

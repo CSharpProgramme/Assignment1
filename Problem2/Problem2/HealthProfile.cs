@@ -18,20 +18,44 @@ namespace Problem2
 
         public HealthProfile(string firstName, string lastName, int birthYear, double height, double weigth, int currentYear)
         {
-            FirstName = firstName;
-            LastName = lastName;
-            BirthYear = birthYear;
-            Height = height;
-            Weigth = weigth;
-            CurrentYear = currentYear;
+            this.firstName = firstName;
+            this.lastName = lastName;
+            this.birthYear = birthYear;
+            this.height = height;
+            this.weigth = weigth;
+            this.currentYear = currentYear;
         }
 
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
-        public int BirthYear { get; set; }
-        public double Height { get; set; }
-        public double Weigth { get; set; }
-        public int CurrentYear { get; set; }
+        public string FirstName 
+        {
+            get { return firstName; } 
+            set { this.firstName = value; } 
+        }
+        public string LastName 
+        { 
+            get { return lastName; }
+            set { this.lastName = value; }
+        }
+        public int BirthYear 
+        { 
+            get { return birthYear;}
+            set { this.birthYear = value; }
+        }
+        public double Height 
+        { 
+            get { return height;}
+            set { this.height = value; }
+        }
+        public double Weigth 
+        { 
+            get { return weigth;}
+            set { this.weigth = value; }
+        }
+        public int CurrentYear 
+        { 
+            get { return currentYear;}
+            set { this.currentYear = value; }
+        }
 
 
         public int Age
@@ -53,9 +77,9 @@ namespace Problem2
             get { return (int)(MaximumHR * 0.85); }
         }
 
-        public int BodyMassIndex()
+        public double BodyMassIndex()
         {
-            return (int)((Weigth * 703) / (Math.Pow(Height, 2.0)));
+            return Math.Round((Weigth * 703) / (Math.Pow(Height, 2.0)), 2);
         }
 
         public string BMITextValue()
@@ -70,7 +94,7 @@ namespace Problem2
             }
             else if (BodyMassIndex() >= 25 && BodyMassIndex() <= 29.9)
             {
-                return "Overweigth";
+                return "Overweight";
             }
             else
             {
@@ -80,16 +104,36 @@ namespace Problem2
 
         public void DisplayPatientRecord()
         {
-            Console.WriteLine("PATIENT HEAlTH RECORD");
-            Console.WriteLine("──────────────────────────");
-            Console.WriteLine($"{"Patient Name",-25} {LastName}, {FirstName}");
-            Console.WriteLine($"{"Patient Birth Year",-25} {BirthYear}");
-            Console.WriteLine($"{"Patient Age",-25} {Age}");
-            Console.WriteLine($"{"Maximum Heart Rate",-25} {MaximumHR}");
-            Console.WriteLine($"{"Target Heart Rate Range",-25} {MinimumTargetHeartRate}—{MaximumTargetHeartRate}");
-            Console.WriteLine($"{"BMI Numeric Value",-25} {BodyMassIndex()}");
-            Console.WriteLine($"{"BMI Text Value",-25} {BMITextValue()}");
-            Console.WriteLine();
+            string fullname = LastName + ", " + FirstName;
+            string heartRatetarget = MinimumTargetHeartRate + "-" + MaximumTargetHeartRate;
+
+            drawLine();
+            Console.WriteLine($"| {"PATIENT HEAlTH RECORD",50}  {"|",27}");
+            drawLine();
+            Console.WriteLine($"| {"Patient Name",-25} | {fullname,-49} |");
+            drawLine();
+            Console.WriteLine($"| {"Patient Birth Year",-25} | {BirthYear,49} |");
+            drawLine();
+            Console.WriteLine($"| {"Patient Age",-25} | {Age,49} |");
+            drawLine();
+            Console.WriteLine($"| {"Maximum Heart Rate",-25} | {MaximumHR,49} |");
+            drawLine();
+            Console.WriteLine($"| {"Target Heart Rate Range",-25} | {heartRatetarget,49} |");
+            drawLine(); 
+            Console.WriteLine($"| {"BMI Numeric Value",-25} | {BodyMassIndex(),49} |");
+            drawLine();
+            Console.WriteLine($"| {"BMI Text Value",-25} | {BMITextValue(),-49} |");
+            drawLine();
+        }
+
+        public static void drawLine()
+        {
+            Console.Write("|");
+            for (int i = 0; i < 79; i++)
+            {
+                Console.Write("-");
+            }
+            Console.WriteLine("|");
         }
     }
 }

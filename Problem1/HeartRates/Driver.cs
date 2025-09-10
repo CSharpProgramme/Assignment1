@@ -16,16 +16,14 @@ namespace Problem1
             Console.WriteLine("Please enter your last name: ");
             string lName = Console.ReadLine();
 
-            Console.WriteLine("Please enter your birth year name: ");
+            Console.WriteLine("Please enter your birth year: ");
             int bYear = int.Parse(Console.ReadLine());
 
-            Console.WriteLine("Please enter the current year name: ");
+            Console.WriteLine("Please enter the current year: ");
             int cYear = int.Parse(Console.ReadLine());
 
             HeartRates myHeartRates = new HeartRates(fName, lName, bYear, cYear);
-
             myHeartRates.DisplayPatientRecord();
-
         }
     }
 }

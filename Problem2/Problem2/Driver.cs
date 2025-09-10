@@ -16,16 +16,16 @@ namespace Problem2
             Console.WriteLine("Please enter your last name: ");
             string lName = Console.ReadLine();
 
-            Console.WriteLine("Please enter your birth year name: ");
+            Console.WriteLine("Please enter your birth year: ");
             int bYear = int.Parse(Console.ReadLine());
 
-            Console.WriteLine("Please enter your height in inches (in): ");
+            Console.WriteLine("Please enter your height in inches(in): ");
             int height = int.Parse(Console.ReadLine());
 
             Console.WriteLine("Please enter your weigth in pounds(lbs): ");
             int weigth = int.Parse(Console.ReadLine());
 
-            Console.WriteLine("Please enter the current year name: ");
+            Console.WriteLine("Please enter the current year: ");
             int cYear = int.Parse(Console.ReadLine());
 
 
