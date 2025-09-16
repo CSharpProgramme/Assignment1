@@ -18,12 +18,12 @@ namespace Problem2
 
         public HealthProfile(string firstName, string lastName, int birthYear, double height, double weigth, int currentYear)
         {
-            this.firstName = firstName;
-            this.lastName = lastName;
-            this.birthYear = birthYear;
-            this.height = height;
-            this.weigth = weigth;
-            this.currentYear = currentYear;
+            FirstName = firstName;
+            LastName = lastName;
+            BirthYear = birthYear;
+            Height = height;
+            Weigth = weigth;
+            CurrentYear = currentYear;
         }
 
         public string FirstName 
@@ -67,12 +67,12 @@ namespace Problem2
         {
             get { return 220 - Age; }
         }
-        public int MinimumTargetHeartRate
+        public int MinimumTargetHR
         {
             get { return (int)(MaximumHR * 0.50); }
         }
 
-        public int MaximumTargetHeartRate
+        public int MaximumTargetHR
         {
             get { return (int)(MaximumHR * 0.85); }
         }
@@ -84,15 +84,16 @@ namespace Problem2
 
         public string BMITextValue()
         {
-            if (BodyMassIndex() < 18.5)
+            double bmi = BodyMassIndex();
+            if (bmi < 18.5)
             {
                 return "Underweight";
             }
-            else if (BodyMassIndex() >= 18.5 && BodyMassIndex() <= 24.9)
+            else if (bmi >= 18.5 && bmi <= 24.9)
             {
                 return "Normal";
             }
-            else if (BodyMassIndex() >= 25 && BodyMassIndex() <= 29.9)
+            else if (bmi >= 25 && bmi <= 29.9)
             {
                 return "Overweight";
             }
@@ -105,7 +106,7 @@ namespace Problem2
         public void DisplayPatientRecord()
         {
             string fullname = LastName + ", " + FirstName;
-            string heartRatetarget = MinimumTargetHeartRate + "-" + MaximumTargetHeartRate;
+            string heartRatetarget = MinimumTargetHR + "-" + MaximumTargetHR;
 
             drawLine();
             Console.WriteLine($"| {"PATIENT HEAlTH RECORD",50}  {"|",27}");

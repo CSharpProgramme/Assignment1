@@ -15,10 +15,10 @@ namespace Problem1
 
         public HeartRates(string firstName, string lastName, int birthYear, int currentYear)
         {
-            this.firstName = firstName;
-            this.lastName = lastName;
-            this.birthYear = birthYear;
-            this.currentYear = currentYear;
+            FirstName = firstName;
+            LastName = lastName;
+            BirthYear = birthYear;
+            CurrentYear = currentYear;
         }
 
         public string FirstName 
@@ -34,7 +34,7 @@ namespace Problem1
         public int BirthYear 
         { 
             get { return birthYear;}
-            set {  this.birthYear = value; }
+            set { this.birthYear = value; }
         }
         public int CurrentYear 
         {   get { return currentYear;}
@@ -52,12 +52,12 @@ namespace Problem1
             get { return 220 - Age; }
         }
 
-        public int MinimumTargetHeartRate
+        public int MinimumTargetHR
         {
             get { return (int) (MaximumHR * 0.50); }
         }
 
-        public int MaximumTargetHeartRate
+        public int MaximumTargetHR
         {
             get { return (int)(MaximumHR * 0.85); }
         }
@@ -65,7 +65,7 @@ namespace Problem1
         public void DisplayPatientRecord()
         {
             string fullname = LastName + ", " + FirstName;
-            string heartRatetarget = MinimumTargetHeartRate + "-" + MaximumTargetHeartRate;
+            string heartRatetarget = MinimumTargetHR + "-" + MaximumTargetHR;
 
             drawLine();
             Console.WriteLine($"| {"PATIENT HEART RATE RECORD",50}  {"|",27}");
