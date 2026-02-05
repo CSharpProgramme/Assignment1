@@ -28,3 +28,10 @@ C:\Users\1971537\Desktop\Assignment1\Problem1\HeartRates\obj\Debug\HeartRates.cs
 C:\Users\1971537\Desktop\Assignment1\Problem1\HeartRates\obj\Debug\HeartRates.csproj.CoreCompileInputs.cache
 C:\Users\1971537\Desktop\Assignment1\Problem1\HeartRates\obj\Debug\HeartRates.exe
 C:\Users\1971537\Desktop\Assignment1\Problem1\HeartRates\obj\Debug\HeartRates.pdb
+C:\Users\steve\Desktop\Assignment1\Problem1\HeartRates\bin\Debug\HeartRates.exe.config
+C:\Users\steve\Desktop\Assignment1\Problem1\HeartRates\bin\Debug\HeartRates.exe
+C:\Users\steve\Desktop\Assignment1\Problem1\HeartRates\bin\Debug\HeartRates.pdb
+C:\Users\steve\Desktop\Assignment1\Problem1\HeartRates\obj\Debug\HeartRates.csproj.AssemblyReference.cache
+C:\Users\steve\Desktop\Assignment1\Problem1\HeartRates\obj\Debug\HeartRates.csproj.CoreCompileInputs.cache
+C:\Users\steve\Desktop\Assignment1\Problem1\HeartRates\obj\Debug\HeartRates.exe
+C:\Users\steve\Desktop\Assignment1\Problem1\HeartRates\obj\Debug\HeartRates.pdb

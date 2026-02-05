@@ -8,11 +8,13 @@ namespace Problem1
 {
     public class HeartRates
     {
+        //ATTRIBUTES
         private string firstName;
         private string lastName;
         private int birthYear;
         private int currentYear;
 
+        //CONSTRUCTOR
         public HeartRates(string firstName, string lastName, int birthYear, int currentYear)
         {
             FirstName = firstName;
@@ -21,6 +23,7 @@ namespace Problem1
             CurrentYear = currentYear;
         }
 
+        //PROPERTIES WITH GETTERS AND SETTERS
         public string FirstName 
         {
             get { return firstName; }
@@ -41,7 +44,7 @@ namespace Problem1
             set { this.currentYear = value; }
         }
 
-
+        //READ-ONLY PROPERTIES
         public int Age
         {
             get { return CurrentYear - BirthYear; }
@@ -62,6 +65,7 @@ namespace Problem1
             get { return (int)(MaximumHR * 0.85); }
         }
 
+        //METHOD TO DISPLAY PATIENT RECORD TABLE
         public void DisplayPatientRecord()
         {
             string fullname = LastName + ", " + FirstName;
@@ -82,6 +86,7 @@ namespace Problem1
             drawLine();
         }
 
+        //HELPER METHOD
         public static void drawLine()
         {
             Console.Write("|");

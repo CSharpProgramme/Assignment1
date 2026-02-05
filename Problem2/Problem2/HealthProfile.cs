@@ -8,6 +8,7 @@ namespace Problem2
 {
     internal class HealthProfile
     {
+        //ATTRIBUTES
         private string firstName;
         private string lastName;
         private int birthYear;
@@ -15,7 +16,7 @@ namespace Problem2
         private double weigth;
         private int currentYear;
 
-
+        //CONSTRUCTOR
         public HealthProfile(string firstName, string lastName, int birthYear, double height, double weigth, int currentYear)
         {
             FirstName = firstName;
@@ -26,6 +27,7 @@ namespace Problem2
             CurrentYear = currentYear;
         }
 
+        //PROPERTIES WITH GETTERS AND SETTERS
         public string FirstName 
         {
             get { return firstName; } 
@@ -57,7 +59,7 @@ namespace Problem2
             set { this.currentYear = value; }
         }
 
-
+        //READ-ONLY PROPERTIES
         public int Age
         {
             get { return CurrentYear - BirthYear; }
@@ -77,11 +79,14 @@ namespace Problem2
             get { return (int)(MaximumHR * 0.85); }
         }
 
+        //METHODS
+        //method to find the patient's body mass index
         public double BodyMassIndex()
         {
             return Math.Round((Weigth * 703) / (Math.Pow(Height, 2.0)), 2);
         }
 
+        //method to find the patient's BMI text value
         public string BMITextValue()
         {
             double bmi = BodyMassIndex();
@@ -103,6 +108,7 @@ namespace Problem2
             }
         }
 
+        //METHOD TO DISPLAY THE PATIENT RECORD TABLE
         public void DisplayPatientRecord()
         {
             string fullname = LastName + ", " + FirstName;
@@ -127,6 +133,7 @@ namespace Problem2
             drawLine();
         }
 
+        //HELPER METHOD
         public static void drawLine()
         {
             Console.Write("|");

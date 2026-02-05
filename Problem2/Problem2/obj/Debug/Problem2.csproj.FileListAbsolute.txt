@@ -22,3 +22,10 @@ C:\Users\1971537\Desktop\Assignment1\Problem2\Problem2\obj\Debug\Problem2.exe.co
 C:\Users\1971537\Desktop\Assignment1\Problem2\Problem2\obj\Debug\Problem2.csproj.CoreCompileInputs.cache
 C:\Users\1971537\Desktop\Assignment1\Problem2\Problem2\obj\Debug\Problem2.exe
 C:\Users\1971537\Desktop\Assignment1\Problem2\Problem2\obj\Debug\Problem2.pdb
+C:\Users\steve\Desktop\Assignment1\Problem2\Problem2\bin\Debug\Problem2.exe.config
+C:\Users\steve\Desktop\Assignment1\Problem2\Problem2\bin\Debug\Problem2.exe
+C:\Users\steve\Desktop\Assignment1\Problem2\Problem2\bin\Debug\Problem2.pdb
+C:\Users\steve\Desktop\Assignment1\Problem2\Problem2\obj\Debug\Problem2.csproj.AssemblyReference.cache
+C:\Users\steve\Desktop\Assignment1\Problem2\Problem2\obj\Debug\Problem2.csproj.CoreCompileInputs.cache
+C:\Users\steve\Desktop\Assignment1\Problem2\Problem2\obj\Debug\Problem2.exe
+C:\Users\steve\Desktop\Assignment1\Problem2\Problem2\obj\Debug\Problem2.pdb
