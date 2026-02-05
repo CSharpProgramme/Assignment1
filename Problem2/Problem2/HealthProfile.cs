@@ -23,7 +23,7 @@ namespace Problem2
             LastName = lastName;
             BirthYear = birthYear;
             Height = height;
-            Weigth = weigth;
+            Weight = weigth;
             CurrentYear = currentYear;
         }
 
@@ -41,17 +41,41 @@ namespace Problem2
         public int BirthYear 
         { 
             get { return birthYear;}
-            set { this.birthYear = value; }
+            set {
+                if (value >= 1900)
+                    birthYear = value;
+                else
+                {
+                    Console.WriteLine("Invalid birth year");
+                    birthYear = 1900;
+                }
+            }
         }
         public double Height 
         { 
             get { return height;}
-            set { this.height = value; }
+            set { 
+                if(value >= 12 && value <= 96)
+                    height = value;
+                else
+                {
+                    Console.WriteLine("Invalid Height");
+                    height = 12;
+                }
+            }
         }
-        public double Weigth 
+        public double Weight
         { 
-            get { return weigth;}
-            set { this.weigth = value; }
+            get { return weigth; }
+            set {
+                if(value >= 5 && value <= 1400)
+                    weigth = value;
+                else
+                {
+                    Console.WriteLine("Invalid Weigth");
+                    weigth = 120;
+                }
+            }
         }
         public int CurrentYear 
         { 
@@ -83,7 +107,7 @@ namespace Problem2
         //method to find the patient's body mass index
         public double BodyMassIndex()
         {
-            return Math.Round((Weigth * 703) / (Math.Pow(Height, 2.0)), 2);
+            return Math.Round((Weight * 703) / (Math.Pow(Height, 2.0)), 2);
         }
 
         //method to find the patient's BMI text value

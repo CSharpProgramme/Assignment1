@@ -25,9 +25,7 @@ namespace Problem2
             Console.WriteLine("Please enter your weigth in pounds(lbs): ");
             int weigth = int.Parse(Console.ReadLine());
 
-            Console.WriteLine("Please enter the current year: ");
-            int cYear = int.Parse(Console.ReadLine());
-
+            int cYear = DateTime.Now.Year;
 
             HealthProfile myHealthProfile = new HealthProfile(fName, lName, bYear, height, weigth, cYear);
             myHealthProfile.DisplayPatientRecord();

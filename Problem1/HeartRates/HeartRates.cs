@@ -13,6 +13,7 @@ namespace Problem1
         private string lastName;
         private int birthYear;
         private int currentYear;
+        int grade; // student grade in a course
 
         //CONSTRUCTOR
         public HeartRates(string firstName, string lastName, int birthYear, int currentYear)
@@ -21,6 +22,7 @@ namespace Problem1
             LastName = lastName;
             BirthYear = birthYear;
             CurrentYear = currentYear;
+
         }
 
         //PROPERTIES WITH GETTERS AND SETTERS
@@ -37,7 +39,17 @@ namespace Problem1
         public int BirthYear 
         { 
             get { return birthYear;}
-            set { this.birthYear = value; }
+            set 
+            {
+                if (value >= 1900)
+                    birthYear = value; 
+                else
+                {
+                    Console.WriteLine("Invalid birth year");
+                    birthYear = 1900;
+                }
+            }
+
         }
         public int CurrentYear 
         {   get { return currentYear;}

@@ -19,8 +19,9 @@ namespace Problem1
             Console.WriteLine("Please enter your birth year: ");
             int bYear = int.Parse(Console.ReadLine());
 
-            Console.WriteLine("Please enter the current year: ");
-            int cYear = int.Parse(Console.ReadLine());
+            //Console.WriteLine("Please enter the current year: ");
+            //int cYear = int.Parse(Console.ReadLine());
+            int cYear = DateTime.Now.Year;
 
             HeartRates myHeartRates = new HeartRates(fName, lName, bYear, cYear);
             myHeartRates.DisplayPatientRecord();

@@ -35,3 +35,5 @@ C:\Users\steve\Desktop\Assignment1\Problem1\HeartRates\obj\Debug\HeartRates.cspr
 C:\Users\steve\Desktop\Assignment1\Problem1\HeartRates\obj\Debug\HeartRates.csproj.CoreCompileInputs.cache
 C:\Users\steve\Desktop\Assignment1\Problem1\HeartRates\obj\Debug\HeartRates.exe
 C:\Users\steve\Desktop\Assignment1\Problem1\HeartRates\obj\Debug\HeartRates.pdb
+C:\Users\1971537\Desktop\Assignment1\Problem1\HeartRates\bin\Debug\HeartRates.pdb
+C:\Users\1971537\Desktop\Assignment1\Problem1\HeartRates\obj\Debug\HeartRates.exe.config
